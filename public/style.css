@@ -1,0 +1,7 @@
+body{margin:0;font-family:Arial,sans-serif;background:#111;color:#ddd;display:flex;}
+#sidebar{width:200px;background:#181818;padding:10px;display:flex;flex-direction:column;gap:10px;}
+#mainPanel{flex:1;display:flex;justify-content:center;align-items:center;background:#101010;}
+#rightPanel{width:250px;background:#181818;padding:10px;}
+button{background:#262626;color:white;border:none;padding:8px;cursor:pointer;border-radius:4px;}
+button:hover{background:#333;}
+#scriptArea{width:400px;height:200px;position:fixed;bottom:20px;left:220px;background:#000;color:#0f0;font-family:monospace;display:none;}
