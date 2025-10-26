@@ -1,13 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head><meta charset="UTF-8"><title>Dashboard</title><link rel="stylesheet" href="style.css"></head>
-<body>
-<h1>Meus Projetos</h1>
-<div id="projectsList"></div>
-<script type="module">
-  const container=document.getElementById('projectsList');
-  fetch('/api/project',{headers:{'Authorization':'Bearer '+localStorage.getItem('token')}})
-    .then(r=>r.json()).then(d=>{ d.projects.forEach(p=>{ const el=document.createElement('div'); el.textContent=p.name; container.appendChild(el); }) });
-</script>
-</body>
-</html>
+// public/dashboard.js
+const container = document.getElementById('projectsList');
+
+fetch('/api/project', {
+  headers: { 'Authorization': 'Bearer ' + localStorage.getItem('token') }
+})
+  .then(res => res.json())
+  .then(data => {
+    if (!data.projects || data.projects.length === 0) {
+      container.textContent = "Nenhum projeto encontrado.";
+      return;
+    }
+
+    data.projects.forEach(project => {
+      const el = document.createElement('div');
+      el.classList.add('project-card');
+      el.textContent = project.name;
+      container.appendChild(el);
+    });
+  })
+  .catch(err => {
+    console.error('[NebulaForge] Erro ao carregar projetos:', err);
+    container.textContent = "Erro ao carregar projetos.";
+  });

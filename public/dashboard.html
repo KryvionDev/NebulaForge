@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | NebulaForge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+  <header class="topbar glass">
+    <div class="logo">🌌 NebulaForge</div>
+    <div><button id="logoutBtn">Sair</button></div>
+  </header>
+  <main class="dashboard">
+    <h2>Meus Projetos</h2>
+    <div id="projectsList"></div>
+    <button id="createProjectBtn">+ Novo Projeto</button>
+  </main>
+  <script type="module" src="/public/dashboard.js"></script>
+  <script type="module" src="/src/user/auth.js"></script>
+</body>
+</html>

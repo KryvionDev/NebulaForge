@@ -1,23 +1,25 @@
 {
-  "name":"nebulaforge",
-  "version":"0.1.0",
-  "type":"module",
-  "scripts":{
-    "dev":"vite",
-    "server":"node server/server.js",
-    "start":"concurrently \"npm run server\" \"npm run dev\""
+  "name": "nebulaforge",
+  "version": "0.1.0",
+
+  "type": "commonjs",
+  "scripts": {
+    "dev": "vite",
+    "server": "node server/server.js",
+    "start": "concurrently \"npm run server\" \"npm run dev\""
   },
-  "dependencies":{
-    "express":"^4.18.2",
-    "mongoose":"^7.3.0",
-    "bcrypt":"^5.1.0",
-    "jsonwebtoken":"^9.0.0",
-    "cors":"^2.8.5",
-    "three":"^0.164.0",
-    "cannon-es":"^0.20.0"
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cannon-es": "^0.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.3.0",
+    "three": "^0.164.0"
   },
-  "devDependencies":{
-    "vite":"^5.0.0",
-    "concurrently":"^8.0.1"
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "vite": "^5.0.0"
   }
 }

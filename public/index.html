@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>NebulaForge</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NebulaForge Engine</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-<div id="editorUI"></div>
-<script type="module" src="/src/main.js"></script>
+<body class="theme-dark">
+  <div id="app">
+    <header class="topbar glass">
+      <div class="logo">🌌 <strong>NebulaForge</strong></div>
+      <nav class="menu">
+        <button id="newSceneBtn">Nova Cena</button>
+        <button id="saveProjectBtn">Salvar</button>
+        <button id="exportBtn">Exportar</button>
+        <button id="settingsBtn">⚙️</button>
+      </nav>
+      <div class="user-menu">
+        <span id="username">Usuário</span>
+        <button id="logoutBtn">Sair</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="sidebar glass">
+        <div class="panel">
+          <h3>Cenas</h3>
+          <ul id="sceneList"></ul>
+          <button id="addSceneBtn">+ Adicionar</button>
+        </div>
+        <div class="panel">
+          <h3>Assets</h3>
+          <ul id="assetList"></ul>
+          <button id="uploadAssetBtn">Upload</button>
+        </div>
+      </aside>
+
+      <section class="editor">
+        <canvas id="editorCanvas"></canvas>
+        <div id="canvasOverlay">Carregando cena...</div>
+      </section>
+
+      <aside class="inspector glass">
+        <h3>Inspector</h3>
+        <div id="inspectorContent"></div>
+      </aside>
+    </main>
+
+    <footer class="bottombar glass">
+      NebulaForge Engine — Alpha v0.2 | Build experimental
+    </footer>
+  </div>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
