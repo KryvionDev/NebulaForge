@@ -1,5 +1,19 @@
 {
-  "nodes":[
-    { "id":"1","type":"box","position":[0,0,0] }
+  "nodes": [
+    {
+      "id": "1",
+      "type": "box",
+      "position": [0, 0, 0],
+      "size": [1, 1, 1],
+      "material": {
+        "color": "#ff0000",
+        "metalness": 0.1,
+        "roughness": 0.8
+      },
+      "physics": {
+        "mass": 1,
+        "dynamic": true
+      }
+    }
   ]
 }
